@@ -1,0 +1,50 @@
+<div>
+  <img src="https://elyex.com/wp-content/uploads/2016/01/Quito-amt-pico-placa-mapa-elyex-multas-retencion.jpg"
+    class="rounded mx-auto d-block h-25 pypimg" alt="hoyNoCirculaImg">
+</div>
+
+<div class="container mt-5">
+  <div class="row justify-content-around">
+    <div class="col-sm">
+      <form>
+        <div class="form-group">
+          <label for="licensePlate">Placa del vehículo</label>
+          <input type="text" class="form-control" id="licensePlate" aria-describedby="licensePlateHelp"
+            placeholder="Ej: PDC-0123">
+          <small id="licensePlateHelp" class="form-text text-muted">Ingresa la placa de tu vehículo</small>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="queryDate">Fecha</label>
+            <input type="date" class="form-control" placeholder="Fecha a consultar">
+            <small id="quedyDateHelp" class="form-text text-muted">Ingresa la fecha a consultar</small>
+          </div>
+          <div class="col">
+            <label for="queryTime">Hora</label>
+            <input type="time" class="form-control" placeholder="Ej: 14:30">
+            <small id="queryTimeHelp" class="form-text text-muted">Ingresa la hora a consultar</small>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Consultar</button>
+      </form>
+    </div>
+    <div class="col-4">
+      <div class="card" style="width: 18rem;" *ngIf="success">
+        <img class="card-img-top"
+          src="https://images.pexels.com/photos/4429509/pexels-photo-4429509.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Puedes circular en este momento.</p>
+        </div>
+      </div>
+      <div class="card justify-content-end" style="width: 18rem;" *ngIf="!success">
+        <img class="card-img-top"
+          src="https://images.unsplash.com/photo-1576172474782-567d7ca1975b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1190&q=80"
+          alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">No puedes circular en este momento.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
