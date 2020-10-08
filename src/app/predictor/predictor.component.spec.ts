@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { PredictorComponent } from './predictor.component';
 
@@ -8,7 +9,11 @@ describe('PredictorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PredictorComponent ]
+      declarations: [ PredictorComponent ],
+      imports: [
+        ReactiveFormsModule,
+        FormsModule
+      ]
     })
     .compileComponents();
   }));
