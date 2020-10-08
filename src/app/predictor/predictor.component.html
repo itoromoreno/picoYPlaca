@@ -10,18 +10,18 @@
         <div class="form-group">
           <label for="licensePlate">Placa del vehículo</label>
           <input type="text" class="form-control" id="licensePlate" aria-describedby="licensePlateHelp"
-            placeholder="Ej: PDC-0123" formControlName="plateNumber">
+            placeholder="Ej: PDC-0123" formControlName="plateNumber" required>
           <small id="licensePlateHelp" class="form-text text-muted">Ingresa la placa de tu vehículo</small>
         </div>
         <div class="row">
           <div class="col">
             <label for="queryDate">Fecha</label>
-            <input type="date" class="form-control" placeholder="Fecha a consultar" formControlName="queryDate">
+            <input type="date" class="form-control" placeholder="Fecha a consultar" formControlName="queryDate" required>
             <small id="quedyDateHelp" class="form-text text-muted">Ingresa la fecha a consultar</small>
           </div>
           <div class="col">
             <label for="queryTime">Hora</label>
-            <input type="time" class="form-control" placeholder="Ej: 14:30" formControlName="queryTime">
+            <input type="time" class="form-control" placeholder="Ej: 14:30" formControlName="queryTime" required>
             <small id="queryTimeHelp" class="form-text text-muted">Ingresa la hora a consultar</small>
           </div>
         </div>

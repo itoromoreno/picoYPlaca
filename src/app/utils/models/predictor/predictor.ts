@@ -46,6 +46,7 @@ export default class Predictor {
   }
 
   getPrediction(): boolean {
+    if(!this.plateNumber) {return false; }
     const queryTimeMiliseconds = (this.queryDate.getHours() * 6 * 10 + this.queryDate.getMinutes());
     if (!this.carCanCirculateOnDate()) {
       if (queryTimeMiliseconds >= (7 * 6 * 10) && queryTimeMiliseconds <= (9 * 6 * 10 + 30)) {
