@@ -48,9 +48,9 @@ export default class Predictor {
   getPrediction(): boolean {
     const queryTimeMiliseconds = (this.queryDate.getHours() * 6 * 10 + this.queryDate.getMinutes());
     if (!this.carCanCirculateOnDate()) {
-      if (queryTimeMiliseconds > (7 * 6 * 10) && queryTimeMiliseconds < (9 * 6 * 10 + 30)) {
+      if (queryTimeMiliseconds >= (7 * 6 * 10) && queryTimeMiliseconds <= (9 * 6 * 10 + 30)) {
         return false;
-      } else if (queryTimeMiliseconds > (16 * 6 * 10) && queryTimeMiliseconds < (19 * 6 * 10 + 30)) {
+      } else if (queryTimeMiliseconds >= (16 * 6 * 10) && queryTimeMiliseconds <= (19 * 6 * 10 + 30)) {
         return false;
       }
     }
