@@ -16,18 +16,18 @@ describe('PredictorModel', () => {
   it('should return false when cannot be on the road', () => {
     queryDate = new Date(2020, 9, 7, 7, 0);
     predictor = new Predictor(plateNumber, queryDate);
-    expect(predictor.getPrediction()).toBeFalsy();
+    expect(predictor.getPrediction().response).toBeFalsy();
   });
 
   it('should return true when can be on the road', () => {
     queryDate = new Date(2020, 9, 7, 6, 59);
     predictor = new Predictor(plateNumber, queryDate);
-    expect(predictor.getPrediction()).toBeTruthy();
+    expect(predictor.getPrediction().response).toBeTruthy();
   });
 
   it('should return false when plate number is empty', () => {
     plateNumber = '';
     predictor = new Predictor(plateNumber, queryDate);
-    expect(predictor.getPrediction()).toBeFalsy();
+    expect(predictor.getPrediction().success).toBeFalsy();
   });
 });
